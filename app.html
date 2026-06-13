@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Dashboard - FietsGarage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">FietsGarage</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Over ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="app.html" class="active">Social Media</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="content">
+      <h1>Social Media Dashboard</h1>
+      <form id="postForm">
+        <h2>Nieuwe post</h2>
+        <label for="postDate">Datum</label>
+        <input type="date" id="postDate" required>
+        <label for="postPlatform">Platform</label>
+        <select id="postPlatform">
+          <option value="Instagram">Instagram</option>
+          <option value="TikTok">TikTok</option>
+          <option value="YouTube">YouTube</option>
+        </select>
+        <label for="postTitle">Titel</label>
+        <input type="text" id="postTitle" required>
+        <label for="postURL">URL</label>
+        <input type="url" id="postURL">
+        <label for="postStatus">Status</label>
+        <select id="postStatus">
+          <option value="Gepland">Gepland</option>
+          <option value="Gepubliceerd">Gepubliceerd</option>
+        </select>
+        <button type="submit" class="btn">Toevoegen</button>
+      </form>
+      <div id="dashboard">
+        <h2>Overzicht</h2>
+        <table id="postsTable">
+          <thead>
+            <tr><th>Datum</th><th>Platform</th><th>Titel</th><th>Status</th><th>URL</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <h2>Statistieken</h2>
+        <ul id="stats"></ul>
+        <h2>Tips &amp; Inspiratie</h2>
+        <button id="randomIdeaBtn" class="btn btn-secondary">Geef me een idee</button>
+        <p id="randomIdea"></p>
+        <p id="hashtags"></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 FietsGarage.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
