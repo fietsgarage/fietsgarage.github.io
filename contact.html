@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - FietsGarage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">FietsGarage</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Over ons</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="app.html">Social Media</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="content">
+      <h1>Contacteer ons</h1>
+      <p>Heb je een vraag of wil je een proefrit maken? Neem contact met ons op via e-mail of telefoon, of vul onderstaand formulier in.</p>
+      <ul class="contact-info">
+        <li><strong>E-mail:</strong> <a href="mailto:bramlesage1@icloud.com">bramlesage1@icloud.com</a></li>
+        <li><strong>Telefoon:</strong> <a href="tel:+32471754616">+32&nbsp;471&nbsp;75&nbsp;46&nbsp;16</a></li>
+      </ul>
+      <form id="contactForm">
+        <label for="name">Naam</label>
+        <input type="text" id="name" required>
+        <label for="email">E-mailadres</label>
+        <input type="email" id="email" required>
+        <label for="message">Bericht</label>
+        <textarea id="message" rows="5" required></textarea>
+        <button type="submit" class="btn">Verstuur</button>
+      </form>
+      <div id="formMessage" class="hidden">Bedankt voor je bericht! Ik neem zo snel mogelijk contact op.</div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 FietsGarage.</p>
+  </footer>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      formMessage.classList.remove('hidden');
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
